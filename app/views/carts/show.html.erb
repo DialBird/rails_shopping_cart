@@ -1,0 +1,11 @@
+<% content_for(:title) do%>カートの中身<% end %>
+
+<% if @cart_items.blank? %>
+  <p class="text-center">
+    There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+  </p>
+<% else %>
+  <% @cart_items.each do |cart_item| %>
+    <%= render 'carts/cart_row', cart_item: cart_item %>
+  <% end %>
+<% end %>

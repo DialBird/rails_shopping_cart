@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 FactoryGirl.create(:product, name: 'バナナ', price: 100)
 FactoryGirl.create(:product, name: 'りんご', price: 200)
 FactoryGirl.create(:product, name: 'メロン', price: 800)
