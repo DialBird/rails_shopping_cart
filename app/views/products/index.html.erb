@@ -1,0 +1,5 @@
+<% content_for(:title) do%>買い物をする<% end %>
+
+<% @products.each do |product| %>
+  <%= render 'product_row', product: product %>
+<% end %>
