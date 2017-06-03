@@ -1,0 +1,22 @@
+<div class="card">
+  <h3 class="card-header">Featured</h3>
+  <div class="card-block">
+    <div class="row">
+      <div class="col-xs-8">
+        <h4><%= product.name %></h4>
+      </div>
+      <div class="col-xs-4">
+        <%= form_tag add_item_cart_path(current_cart) do %>
+          <h4 class="text-right">Unit Price: <span style="color: green;"><%= product.price %></span></h4>
+          <div class="input-group">
+            <%= number_field_tag 'quantity', '1', class: 'form-control', min: 1 %>
+            <div class="input-group-btn">
+              <%= hidden_field_tag 'product_id', product.id %>
+              <%= submit_tag 'Add to Cart', class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
