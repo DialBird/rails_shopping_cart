@@ -4,12 +4,13 @@ class CartsController < ApplicationController
   end
   
   def add_item
-    if current_cart.cart_items.find_by(product_id: params[:product_id])
-      item = current_cart.cart_items.find_by(product_id: params[:product_id])
-      item.quantity += params[:quantity].to_i
-    else
-      item = current_cart.cart_items.build(quantity: params[:quantity], product_id: params[:product_id])
+    item = current_cart.cart_items.find_by(product_id: params[:product_id])
+
+    if item.blank?
+      item = current_cart.cart_items.build(product_id: params[:product_id], quantity: 0)
     end
+
+    item.quantity += params[:quantity].to_i
     item.save
     redirect_to current_cart
   end
