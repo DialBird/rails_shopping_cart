@@ -8,5 +8,7 @@
   <% @cart_items.each do |cart_item| %>
     <%= render 'carts/cart_row', cart_item: cart_item %>
   <% end %>
-  <p><%= current_cart.total_price %></p>
+  <div class="well well-sm text-right">
+    <p><strong>合計金額</strong> <%= current_cart.total_price %>円</p>
+  </div>
 <% end %>
