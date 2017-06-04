@@ -4,11 +4,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_cart
 
   def current_cart
-    if session[:cart_id]
+    if session[:cart_id] and Cart.find_by(id: session[:cart_id])
       @cart = Cart.find(session[:cart_id])
     else
-      @cart = Cart.create(order_status_id: 1)
+      @cart = Cart.create()
       session[:cart_id] = @cart.id
+      @cart
     end
   end
 end
