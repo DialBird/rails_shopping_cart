@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def current_cart
     if session[:cart_id]
-      @cart ||= Cart.find(session[:cart_id])
+      @cart = Cart.find(session[:cart_id])
     else
       @cart = Cart.create(order_status_id: 1)
       session[:cart_id] = @cart.id
