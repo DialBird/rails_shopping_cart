@@ -5,7 +5,7 @@
         <h4><%= product.name %></h4>
       </div>
       <div class="col-xs-4">
-        <%= form_tag add_item_cart_path(current_cart) do %>
+        <%= form_tag add_item_path, method: :post do %>
           <h4 class="text-right">Unit Price: <span style="color: green;"><%= product.price %></span></h4>
           <div class="input-group">
             <%= number_field_tag 'quantity', 1, class: 'form-control', min: 1 %>
