@@ -19,8 +19,6 @@ gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'kaminari'
 gem 'active_hash'
-gem 'carrierwave'
-gem 'rmagick'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

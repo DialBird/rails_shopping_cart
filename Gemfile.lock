@@ -60,10 +60,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (1.1.0)
-      activemodel (>= 4.0.0)
-      activesupport (>= 4.0.0)
-      mime-types (>= 1.16)
     childprocess (0.7.0)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.1)
@@ -205,7 +201,6 @@ GEM
       activesupport
       rails (>= 3.0.0)
       thor (>= 0.19.1)
-    rmagick (2.16.0)
     rspec-core (3.6.0)
       rspec-support (~> 3.6.0)
     rspec-expectations (3.6.0)
@@ -287,7 +282,6 @@ DEPENDENCIES
   awesome_print
   byebug
   capybara (~> 2.13)
-  carrierwave
   coffee-rails (~> 4.2)
   database_cleaner
   factory_girl_rails
@@ -308,7 +302,6 @@ DEPENDENCIES
   rails (~> 5.1.1)
   rails-controller-testing
   rename
-  rmagick
   rspec-rails
   rubocop
   selenium-webdriver
